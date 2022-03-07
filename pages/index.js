@@ -1,6 +1,17 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
+import Image from 'next/image';
+
+const YourComponent = () => (
+  <Image
+    src="/images/profile.jpg" // Route of the image file
+    height={144} // Desired size with correct aspect ratio
+    width={144} // Desired size with correct aspect ratio
+    alt="Your Name"
+  />
+);
+
 export default function Home() {
   return (
     <div className="container">
@@ -13,6 +24,7 @@ export default function Home() {
         <h1 className="title">
           <Link href="/posts/first-post">first-post</Link>
         </h1>
+        <YourComponent />
 
         <p className="description">
           Get started by editing <code>pages/index.js</code>
